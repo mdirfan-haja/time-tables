@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="times-table">
+
+        <div class="box1" v-for="table in allTables">
+            <h2>Times Tables</h2>
+            <p>One times tables {{ autoMulti3(table.message1) }}</p>
+            <p>Two times tables {{ autoMulti(table.message) }}</p>
+            <p>Three times Tables {{ autoMulti1(table.message) }}</p>
+            <p>Four times Tables {{ autoMulti2(table.message) }}</p>
+            <p>Five times Tables {{ autoMulti4(table.message) }}</p>
+            <p>Six times Tables {{ autoMulti5(table.message) }}</p>
+            <p>Seven times Tables {{ autoMulti6(table.message) }}</p>
+            <p>Eight times Tables {{ autoMulti7(table.message) }}</p>
+            <p>Nine times Tables {{ autoMulti8(table.message) }}</p>
+            <p>Ten times Tables {{ autoMulti9(table.message) }}</p>
+            <p>Hundred times Tables {{ autoMulti10(table.message) }}</p>
+
+        </div>
+
+
+
+        <p> <input v-model="multiple"></p>
+
+
+
+    </div>
+</body>
+<script>
+    var timestable = new Vue({
+        el: '#times-table',
+        data: {
+
+            multiple: 0,
+            allTables: [{
+                message: 0,
+                message1: 0,
+
+            }]
+        },
+        methods: {
+            autoMulti: function() {
+                var times1 = 2
+                return this.message = parseInt(times1) * parseInt(this.multiple)
+            },
+
+            autoMulti1: function() {
+                var times1 = [3]
+                return this.message = parseInt(times1) * parseInt(this.multiple)
+            },
+            autoMulti2: function() {
+                var times1 = [4]
+                return this.message = parseInt(times1) * parseInt(this.multiple)
+            },
+
+            autoMulti3: function() {
+                var times1 = 1
+                return this.message = parseInt(times1) * parseInt(this.multiple)
+            },
+            autoMulti4: function() {
+                var times1 = 5
+                return this.message = parseInt(times1) * parseInt(this.multiple)
+            },
+            autoMulti5: function() {
+                var times1 = 6
+                return this.message = parseInt(times1) * parseInt(this.multiple)
+            },
+            autoMulti5: function() {
+                var times1 = 6
+                return this.message = parseInt(times1) * parseInt(this.multiple)
+            },
+
+            autoMulti6: function() {
+                var times1 = 7
+                return this.message = parseInt(times1) * parseInt(this.multiple)
+            },
+            autoMulti7: function() {
+                var times1 = 8
+                return this.message = parseInt(times1) * parseInt(this.multiple)
+            },
+            autoMulti8: function() {
+                var times1 = 9
+                return this.message = parseInt(times1) * parseInt(this.multiple)
+            },
+            autoMulti9: function() {
+                var times1 = 10
+                return this.message = parseInt(times1) * parseInt(this.multiple)
+            },
+            autoMulti10: function() {
+                var times1 = 100
+                return this.message = parseInt(times1) * parseInt(this.multiple)
+            },
+
+
+        }
+    })
+</script>
+
+</html>
